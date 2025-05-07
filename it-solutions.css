@@ -1,0 +1,425 @@
+:root {
+  --main-color: #111111;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Seletores de tag*/
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+  width: 100vw;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header e navbar*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background-color: var(--main-color);
+  width: 100%;
+  z-index: 1;
+}
+
+.header > .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.navbar > nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.navbar > nav > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/*Showcase*/
+
+.showcase {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase > img {
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50;
+}
+
+.overlay-content > h3 {
+  text-transform: none;
+  font-size: 26px;
+}
+
+.overlay-content > p {
+  font-size: 14px;
+}
+
+.overlay-content > a {
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  padding: 10px 35px;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  transition: background 500ms ease;
+}
+
+.overlay-content > a:hover {
+  cursor: pointer;
+  background: #000;
+}
+
+/* Nossos clientes*/
+.our-clients {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  background-color: #fff;
+  padding: 30px 100px;
+}
+
+.our-clients > h3 {
+  display: flex;
+  height: 30px;
+  flex-basis: 100%;
+  color: #111111;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.clients-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 15px;
+  width: 100%;
+}
+
+.our-clients > .clients-images > img {
+  height: 70px;
+  width: 70px;
+}
+
+.our-clients > .clients-images > img:nth-child(1) {
+  width: 80px;
+}
+
+.our-clients > .clients-images > img:nth-child(4) {
+  height: 90px;
+}
+
+/*O QUE FAZEMOS*/
+
+#what-we-do {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 50px 50px;
+}
+
+#what-we-do > h3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.jobs {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.our-job {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.our-job > i {
+  font-size: 30px;
+}
+
+/*NOSSO PRODUTO*/
+
+#our-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 30px;
+  background-color: #fff;
+}
+
+#our-product > h3 {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  color: #111111;
+  padding-bottom: 30px;
+}
+
+#our-product > img {
+  height: 350px;
+}
+
+.difs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 650px;
+}
+
+.difs > .dif > p,
+.difs > .dif > i {
+  color: #111111;
+}
+
+.difs > .dif > p {
+  line-break: auto;
+  font-size: 1.2rem;
+}
+
+.dif {
+  display: flex;
+  gap: 5px;
+}
+
+.dif > i {
+  font-size: 20px;
+}
+
+/* O QUE ACHAM DE NÓS*/
+
+#what-seem-about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#what-seem-about-us > h3 {
+  padding-bottom: 30px;
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profiles > .profile:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 15px;
+  background-color: #333333;
+}
+
+.profiles > .profile > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* GALERIA  */
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+}
+
+#gallery > h3 {
+  color: #111111;
+  padding-bottom: 30px;
+}
+
+.gallery-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  gap: 20px;
+}
+
+.gallery-photos > img {
+  display: inline-block;
+  height: 360px;
+  width: 540px;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* RESPONSIVIDADE*/
+
+@media (max-width: 768px) {
+  .header {
+    height: 150px;
+    align-items: start;
+  }
+
+  .header > .navbar {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar > nav {
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navbar > nav > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: background 500ms ease;
+  }
+
+  .navbar > nav > a:nth-child(2) {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .navbar > nav > a:hover {
+    background: #000;
+  }
+
+  .our-clients > .clients-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  .jobs {
+    flex-direction: column;
+  }
+
+  #our-product {
+    flex-direction: column;
+  }
+
+  #our-product > img {
+    padding-bottom: 15px;
+    height: 350px;
+    width: 200px;
+    align-self: center;
+  }
+
+  .difs {
+    display: flex;
+    width: 100%;
+  }
+
+  .difs > .dif {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+
+  .difs > .dif > p {
+    text-align: center;
+  }
+
+  .profiles > .profile {
+    flex-direction: column !important;
+    width: 300px;
+  }
+
+  .profiles > .profile > img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .profiles > .profile > p {
+    text-align: center;
+  }
+
+  .gallery-photos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-photos > img {
+    width: auto;
+    padding: 20px 0px;
+  }
+}
